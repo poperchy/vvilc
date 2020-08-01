@@ -1,0 +1,80 @@
+.nav {
+  display: flex;
+  flex-basis: 33.33%;
+  flex-direction: column;
+  transition: 1s;
+
+  @include desktop {
+    flex-direction: row;
+  }
+  @include tablet{
+    flex-direction: row;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(116.15deg, #D369D6 7.15%, #EB0A3C 94.53%);
+    transition: all 0.5s;
+
+
+    &--active {
+      transform: translateX(0%);
+      background: linear-gradient(116.15deg, #D369D6 7.15%, #EB0A3C 94.53%);
+      transition: all 1s;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      background: none;
+      position: relative;
+      padding-bottom: 0;
+      transform: none;
+    }
+    @include tablet {
+      flex-direction: row;
+      background: none;
+      position: relative;
+      padding-bottom: 0;
+      transform: none;
+    }
+  }
+
+
+  &__item {
+    padding-bottom: 2.3rem;
+
+    @include desktop {
+      padding-right: 2.9vw;
+      white-space: nowrap;
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+
+    @include tablet{
+      padding-right: 2.9vw;
+      white-space: nowrap;
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__button {
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    border: none;
+    background: black;
+    z-index: 1;
+  }
+}

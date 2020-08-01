@@ -1,0 +1,16 @@
+<nav class="nav">
+    <button class="nav__button  hide">
+        <span class="visually-hidden">Открыть меню</span>
+    </button>
+        <ul class="nav__list">
+            {% for item in nav %}
+                <li class="nav__item">
+                    <a href="{{ item.link }}" class="nav__link">{{ item.caption }}</a></li>
+            {% endfor %}
+            <ul class="social-link social-link__list hide">
+                <li class="social-link__item"><a href="#">inst</a></li>
+                <li class="social-link__item"><a href="#">fb</a></li>
+                <li class="social-link__item"><a href="#">tw</a></li>
+            </ul>
+        </ul>
+</nav>

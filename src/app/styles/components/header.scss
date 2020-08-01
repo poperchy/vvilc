@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.875rem;
+
+  &__logo {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  &__basket-wrap {
+    flex-basis: 33.33%;
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
+
+  &__basket {
+    position: relative;
+    display: flex;
+    padding-right: 2.5rem;
+
+    &-name{
+      @include mobile{
+        display: none;
+      }
+    }
+
+
+    &-image {
+      position: absolute;
+      padding-left: 0.5rem;
+      bottom: -0.3rem;
+      right: 0;
+
+      @include mobile{
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--full {
+      position: absolute;
+      width: 0.875rem;
+      height: 0.875rem;
+      background-image: linear-gradient(130.7deg, #D369D6 7.15%, #EB0A3C 94.53%);
+      border-radius: 50%;
+      border: 0.55px solid #FFFFFF;
+      right: -8px;
+      top: 0.3rem;
+
+      @include mobile{
+        top: -0.8rem;
+      }
+    }
+  }
+}
